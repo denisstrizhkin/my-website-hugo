@@ -1,0 +1,296 @@
+/*
+  ==============================================
+  Styles Reset
+  ==============================================
+*/
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*
+  ==============================================
+  Vars
+  ==============================================
+*/
+
+:root {
+  --clr-bg: white;
+  --clr-normal-1: #222222;
+  --clr-normal-2: #8a8a8a;
+  --clr-accent-1: #50a14f;
+}
+
+/*
+  ==============================================
+  Utility Classes
+  ==============================================
+*/
+
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-normal-1);
+  border-top: 3px solid var(--clr-accent);
+}
+
+._wip-img {
+  display: block;
+  margin: 3em auto;
+}
+
+._container {
+  width: min(95%, 50em);
+  margin: 0 auto;
+}
+
+._link {
+  color: var(--clr-normal-1);
+  text-decoration: none;
+}
+
+._link:focus {
+  outline: var(--clr-accent-1) solid 1px;
+}
+
+._link:hover {
+  outline: none;
+}
+
+/*
+  ==============================================
+  Header
+  ==============================================
+*/
+
+.header__title {
+  font-size: 2.5rem;
+  line-height: 1.0em;
+  margin-block: 0.2em 0.5em;
+}
+
+.nav {
+  font-size: 1.25rem;
+  text-align: right;
+}
+
+.nav__link+.nav__link {
+  margin-left: 0.5em;
+}
+
+.nav__link {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.nav__link:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+
+.nav__link:hover:after {
+  width: 100%;
+  background: var(--clr-accent-1);
+}
+
+/*
+  ==============================================
+  Arcticle Preview
+  ==============================================
+*/
+
+.article-preview {
+  line-height: 1.5;
+}
+
+.article-preview__container {
+  padding-block: 1.5em;
+  border-bottom: 1px solid var(--clr-normal-2);
+}
+
+.article-preview__title {
+  font-size: 1.7rem;
+}
+
+.article-preview__title__link {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.article-preview__title__link:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+
+.article-preview__title__link:hover:after {
+  width: 100%;
+  background: var(--clr-accent-1);
+}
+
+.article-preview__info {
+  font-size: 0.9rem;
+  margin-bottom: 1.0em;
+  color: var(--clr-normal-2);
+}
+
+.article-preview__paragraph {
+  font-size: 1.0rem;
+  margin-bottom: 1em;
+}
+
+.article-preview__readmore {
+  font-size: 1.1rem;
+  color: var(--clr-accent-1);
+}
+
+.article-preview__readmore:hover,
+.article-preview__readmore:focus {
+  border-bottom: 1px solid var(--clr-accent-1);
+}
+
+/*
+  ==============================================
+  About
+  ==============================================
+*/
+
+.about__container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 3em;
+  flex-wrap: wrap;
+}
+
+.about__img {
+  align-self: flex-start;
+  width: 35%;
+  min-width: 15em;
+  border-radius: 1.5em;
+}
+
+.about__text {
+  width: 55%;
+  min-width: 15em;
+  margin-bottom: 1.5em;
+}
+
+.about__paragraph {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/*
+  ==============================================
+  Footer
+  ==============================================
+*/
+
+.social-links {
+  text-align: center;
+  font-size: 1.9rem;
+  padding-block: 1.0em 0.5em;
+}
+
+.social-links__link:hover,
+.social-links__link:focus {
+  color: var(--clr-accent-1);
+  outline: none;
+}
+
+.social-links__link+.social-links__link {
+  margin-left: 0.25em;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.copyright__text {
+  color: var(--clr-normal-2);
+  font-size: 1rem;
+}
